@@ -1,0 +1,306 @@
+GET localhost:9200/concerts/_search?size=8000&pretty=true&q=*:*
+{
+    "took": 7,
+    "timed_out": false,
+    "_shards": {
+        "total": 3,
+        "successful": 3,
+        "failed": 0
+    },
+    "hits": {
+        "total": 12,
+        "max_score": 1,
+        "hits": [
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "3",
+                "_score": 1,
+                "_source": {
+                    "artist": "Neil Young",
+                    "date": {
+                        "month": 7,
+                        "day": 11,
+                        "year": 2015
+                    },
+                    "venue": {
+                        "name": "Pinnacle Bank Arena",
+                        "city": "Lincoln",
+                        "state": "NE"
+                    }
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "6",
+                "_score": 1,
+                "_source": {
+                    "artist": [
+                        "Robert Delong",
+                        "The Airborne Toxic Event",
+                        "Walk the Moon",
+                        "Neon Trees",
+                        "Fitz and the Tantrums"
+                    ],
+                    "date": {
+                        "month": 12,
+                        "day": 18,
+                        "year": 2014
+                    },
+                    "venue": {
+                        "name": "First Niagara Arena",
+                        "city": "Buffalo",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Laura",
+                        "Trillian"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "9",
+                "_score": 1,
+                "_source": {
+                    "artist": "Two Door Cinema Club",
+                    "date": {
+                        "month": 10,
+                        "day": 12,
+                        "year": 2013
+                    },
+                    "venue": {
+                        "name": "Water Street Music Hall",
+                        "city": "Rochester",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Laura",
+                        "Adam"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "10",
+                "_score": 1,
+                "_source": {
+                    "artist": "fun.",
+                    "date": {
+                        "month": 11,
+                        "day": 4,
+                        "year": 2012
+                    },
+                    "venue": {
+                        "name": "Gordon Field House",
+                        "city": "Rochester",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Laura",
+                        "Tricia",
+                        "Emily",
+                        "Caroline",
+                        "Veronica",
+                        "Jake",
+                        "Brett",
+                        "Sam",
+                        "Xandra"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "13",
+                "_score": 1,
+                "_source": {
+                    "artist": "Sam Roberts Band",
+                    "date": {
+                        "month": 7,
+                        "day": 29,
+                        "year": 2012
+                    },
+                    "venue": {
+                        "name": "Canalside",
+                        "city": "Buffalo",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Laura",
+                        "Tricia",
+                        "Jeremy"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "1",
+                "_score": 1,
+                "_source": {
+                    "artist": "Walk the Moon",
+                    "date": {
+                        "month": 8,
+                        "day": 3,
+                        "year": 2015
+                    },
+                    "venue": {
+                        "name": "Sumtur Ampitheatre",
+                        "city": "Papillion",
+                        "state": "NE"
+                    },
+                    "friends": [
+                        "Henry",
+                        "Christine"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "4",
+                "_score": 1,
+                "_source": {
+                    "artist": "The Wombats",
+                    "date": {
+                        "month": 5,
+                        "day": 2,
+                        "year": 2015
+                    },
+                    "venue": {
+                        "name": "The Montage Music Hall",
+                        "city": "Rochester",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Tricia",
+                        "Laura",
+                        "Adam"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "7",
+                "_score": 1,
+                "_source": {
+                    "artist": [
+                        "Walk the Moon",
+                        "New Politics",
+                        "Kongos"
+                    ],
+                    "date": {
+                        "month": 1,
+                        "day": 23,
+                        "year": 2015
+                    },
+                    "venue": {
+                        "name": "Main St Armory",
+                        "city": "Rochester",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Laura",
+                        "Adam"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "11",
+                "_score": 1,
+                "_source": {
+                    "artist": "Macklemore",
+                    "date": {
+                        "month": 4,
+                        "day": 28,
+                        "year": 2013
+                    },
+                    "venue": {
+                        "name": "Gordon Field House",
+                        "city": "Rochester",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Brett",
+                        "Sam"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "2",
+                "_score": 1,
+                "_source": {
+                    "artist": "alt-J",
+                    "date": {
+                        "month": 7,
+                        "day": 28,
+                        "year": 2015
+                    },
+                    "venue": {
+                        "name": "Stir Concert Cove",
+                        "city": "Council Bluffs",
+                        "state": "IA"
+                    },
+                    "friends": [
+                        "Jensen",
+                        "Wilson",
+                        "Kelly Jo",
+                        "Yash"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "5",
+                "_score": 1,
+                "_source": {
+                    "artist": "Cold War Kids",
+                    "date": {
+                        "month": 3,
+                        "day": 19,
+                        "year": 2015
+                    },
+                    "venue": {
+                        "name": "Water Street Music Hall",
+                        "city": "Rochester",
+                        "state": "NY"
+                    },
+                    "friends": [
+                        "Laura",
+                        "Adam"
+                    ]
+                }
+            },
+            {
+                "_index": "concerts",
+                "_type": "concert",
+                "_id": "8",
+                "_score": 1,
+                "_source": {
+                    "artist": "St. Vincent",
+                    "date": {
+                        "month": 3,
+                        "day": 5,
+                        "year": 2015
+                    },
+                    "venue": {
+                        "name": "Water Street Music Hall",
+                        "city": "Rochester",
+                        "state": "NY"
+                    },
+                    "friends": "Laura"
+                }
+            }
+        ]
+    }
+}

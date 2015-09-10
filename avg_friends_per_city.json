@@ -1,0 +1,77 @@
+POST http://localhost:9200/concerts/concert/_search
+{
+   "size": 0, 
+   "aggregations": {
+      "by_city": {
+         "terms": {
+            "field": "venue.city"
+         },
+         "aggregations": {
+            "avg_num_friends": {
+               "avg": {
+                  "script_file": "my_script"
+               }
+            }
+         }
+      }
+   }
+}
+
+
+Response: {
+  "took": 4,
+  "timed_out": false,
+  "_shards": {
+    "total": 3,
+    "successful": 3,
+    "failed": 0
+  },
+  "hits": {
+    "total": 12,
+    "max_score": 0,
+    "hits": []
+  },
+  "aggregations": {
+    "by_city": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "rochester",
+          "doc_count": 7,
+          "avg_num_friends": {
+            "value": 3
+          }
+        },
+        {
+          "key": "buffalo",
+          "doc_count": 2,
+          "avg_num_friends": {
+            "value": 2.5
+          }
+        },
+        {
+          "key": "council bluffs",
+          "doc_count": 1,
+          "avg_num_friends": {
+            "value": 5
+          }
+        },
+        {
+          "key": "lincoln",
+          "doc_count": 1,
+          "avg_num_friends": {
+            "value": 0
+          }
+        },
+        {
+          "key": "papillion",
+          "doc_count": 1,
+          "avg_num_friends": {
+            "value": 2
+          }
+        }
+      ]
+    }
+  }
+}

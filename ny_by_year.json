@@ -1,0 +1,88 @@
+POST http://localhost:9200/concerts/concert/_search
+{
+   "size": 0, 
+   "aggregations": {
+      "by_state": {
+         "terms": {
+            "field": "venue.state",
+            "include": "ny"
+         },
+         "aggregations": {
+            "by_year": {
+               "range": {
+                  "field": "date.year",
+                  "ranges": [
+                      { "from": 2012, "to": 2013 },
+                      { "from": 2013, "to": 2014 },
+                      { "from": 2014, "to": 2015 },
+                      { "from": 2015, "to": 2016 }
+                  ]
+               }
+            }
+         }
+      }
+   }
+}
+
+Response: {
+    "took": 9,
+    "timed_out": false,
+    "_shards": {
+        "total": 3,
+        "successful": 3,
+        "failed": 0
+    },
+    "hits": {
+        "total": 12,
+        "max_score": 0,
+        "hits": []
+    },
+    "aggregations": {
+        "by_state": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+                {
+                    "key": "ny",
+                    "doc_count": 9,
+                    "by_year": {
+                        "buckets": [
+                            {
+                                "key": "2012.0-2013.0",
+                                "from": 2012,
+                                "from_as_string": "2012.0",
+                                "to": 2013,
+                                "to_as_string": "2013.0",
+                                "doc_count": 2
+                            },
+                            {
+                                "key": "2013.0-2014.0",
+                                "from": 2013,
+                                "from_as_string": "2013.0",
+                                "to": 2014,
+                                "to_as_string": "2014.0",
+                                "doc_count": 2
+                            },
+                            {
+                                "key": "2014.0-2015.0",
+                                "from": 2014,
+                                "from_as_string": "2014.0",
+                                "to": 2015,
+                                "to_as_string": "2015.0",
+                                "doc_count": 1
+                            },
+                            {
+                                "key": "2015.0-2016.0",
+                                "from": 2015,
+                                "from_as_string": "2015.0",
+                                "to": 2016,
+                                "to_as_string": "2016.0",
+                                "doc_count": 4
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,242 @@
+PUT localhost:9200/concerts/concert/1
+{
+  "artist": "Walk the Moon",
+  "date": {
+    "month": 8,
+    "day": 3,
+    "year": 2015
+  },
+  "venue": {
+    "name": "Sumtur Ampitheatre",
+    "city": "Papillion",
+    "state": "NE"
+  },
+  "friends": [
+    "Henry",
+    "Christine"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/2
+{
+  "artist": "alt-J",
+  "date": {
+    "month": 7,
+    "day": 28,
+    "year": 2015
+  },
+  "venue": {
+    "name": "Stir Concert Cove",
+    "city": "Council Bluffs",
+    "state": "IA"
+  },
+  "friends": [
+    "Jensen",
+    "Wilson",
+    "Kelly Jo",
+    "Yash"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/3
+{
+  "artist": "Neil Young",
+  "date": {
+    "month": 7,
+    "day": 11,
+    "year": 2015
+  },
+  "venue": {
+    "name": "Pinnacle Bank Arena",
+    "city": "Lincoln",
+    "state": "NE"
+  }
+}
+
+PUT localhost:9200/concerts/concert/4
+{
+  "artist": "The Wombats",
+  "date": {
+    "month": 5,
+    "day": 2,
+    "year": 2015
+  },
+  "venue": {
+    "name": "The Montage Music Hall",
+    "city": "Rochester",
+    "state": "NY"
+  },
+  "friends": [
+    "Tricia",
+    "Laura",
+    "Adam"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/5
+{
+  "artist": "Cold War Kids",
+  "date": {
+    "month": 3,
+    "day": 19,
+    "year": 2015
+  },
+  "venue": {
+    "name": "Water Street Music Hall",
+    "city": "Rochester",
+    "state": "NY"
+  },
+  "friends": [
+    "Laura",
+    "Adam"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/6
+{
+  "artist": [
+    "Robert Delong",
+    "The Airborne Toxic Event",
+    "Walk the Moon",
+    "Neon Trees",
+    "Fitz and the Tantrums"
+  ],
+  "date": {
+    "month": 12,
+    "day": 18,
+    "year": 2014
+  },
+  "venue": {
+    "name": "First Niagara Arena",
+    "city": "Buffalo",
+    "state": "NY"
+  },
+  "friends": [
+    "Laura",
+    "Trillian"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/7
+{
+  "artist": [
+    "Walk the Moon",
+    "New Politics",
+    "Kongos"
+  ],
+  "date": {
+    "month": 1,
+    "day": 23,
+    "year": 2015
+  },
+  "venue": {
+    "name": "Main St Armory",
+    "city": "Rochester",
+    "state": "NY"
+  },
+  "friends": [
+    "Laura",
+    "Adam"
+  ]
+}
+
+
+PUT localhost:9200/concerts/concert/8
+{
+  "artist": "St. Vincent",
+  "date": {
+    "month": 3,
+    "day": 5,
+    "year": 2015
+  },
+  "venue": {
+    "name": "Water Street Music Hall",
+    "city": "Rochester",
+    "state": "NY"
+  },
+  "friends": "Laura"
+}
+
+PUT localhost:9200/concerts/concert/9
+{
+  "artist": "Two Door Cinema Club",
+  "date": {
+    "month": 10,
+    "day": 12,
+    "year": 2013
+  },
+  "venue": {
+    "name": "Water Street Music Hall",
+    "city": "Rochester",
+    "state": "NY"
+  },
+  "friends": [
+    "Laura",
+    "Adam"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/10
+{
+  "artist": "fun.",
+  "date": {
+    "month": 11,
+    "day": 4,
+    "year": 2012
+  },
+  "venue": {
+    "name": "Gordon Field House",
+    "city": "Rochester",
+    "state": "NY"
+  },
+  "friends": [
+    "Laura",
+    "Tricia",
+    "Emily",
+    "Caroline",
+    "Veronica",
+    "Jake",
+    "Brett",
+    "Sam",
+    "Xandra"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/11
+{
+  "artist": "Macklemore",
+  "date": {
+    "month": 4,
+    "day": 28,
+    "year": 2013
+  },
+  "venue": {
+    "name": "Gordon Field House",
+    "city": "Rochester",
+    "state": "NY"
+  },
+  "friends": [
+    "Brett",
+    "Sam"
+  ]
+}
+
+PUT localhost:9200/concerts/concert/13
+{
+  "artist": "Sam Roberts Band",
+  "date": {
+    "month": 7,
+    "day": 29,
+    "year": 2012
+  },
+  "venue": {
+    "name": "Canalside",
+    "city": "Buffalo",
+    "state": "NY"
+  },
+  "friends": [
+    "Laura",
+    "Tricia",
+    "Jeremy"
+  ]
+}

@@ -1,0 +1,86 @@
+PUT http://localhost:9200/concerts/
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "standard": {
+          "type": "custom",
+          "tokenizer": "whitespace",
+          "filter": [
+            "lowercase",
+            "shingle"
+          ]
+        },
+        "city_custom": {
+          "type": "custom",
+          "tokenizer": "whitespace",
+          "filter": [
+            "lowercase",
+            "city_shingle"
+          ]
+        }
+      },
+      "filter": {
+        "shingle": {
+          "type": "shingle",
+          "max_shingle_size": 5,
+          "min_shingle_size": 2
+        },
+        "city_shingle": {
+          "type": "shingle",
+          "max_shingle_size": 5,
+          "min_shingle_size": 2,
+          "output_unigrams": false,
+          "output_unigrams_if_no_shingles": true
+        }
+      }
+    }
+  },
+  "mappings": {
+    "concert": {
+      "properties": {
+        "artist": {
+          "type": "string",
+          "index": "analyzed"
+        },
+        "date": {
+          "type": "nested",
+          "index": "not_analyzed",
+          "include_in_parent": true,
+          "properties": {
+            "month": {
+              "type": "integer"
+            },
+            "day": {
+              "type": "integer"
+            },
+            "year": {
+              "type": "integer"
+            }
+          }
+        },
+        "venue": {
+          "type": "nested",
+          "include_in_parent": true,
+          "index": "analyzed",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string",
+              "analyzer": "city_custom"
+            },
+            "state": {
+              "type": "string"
+            }
+          }
+        },
+        "friends": {
+          "type": "string",
+          "index": "analyzed"
+        }
+      }
+    }
+  }
+}

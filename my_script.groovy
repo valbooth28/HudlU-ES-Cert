@@ -1,0 +1,1 @@
+doc['friends'].values.size()

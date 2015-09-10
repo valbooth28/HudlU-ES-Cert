@@ -1,0 +1,35 @@
+POST http://localhost:9200/concerts/concert/_search
+{
+   "size": 0,
+         "aggregations": {
+            "friends stats": {
+               "stats": {
+                  "script_file": "my_script"
+               }
+            }
+         }
+}
+
+Response: {
+    "took": 4,
+    "timed_out": false,
+    "_shards": {
+        "total": 3,
+        "successful": 3,
+        "failed": 0
+    },
+    "hits": {
+        "total": 12,
+        "max_score": 0,
+        "hits": []
+    },
+    "aggregations": {
+        "friends stats": {
+            "count": 12,
+            "min": 0,
+            "max": 9,
+            "avg": 2.75,
+            "sum": 33
+        }
+    }
+}

@@ -1,0 +1,39 @@
+POST http://localhost:9200/concerts/concert/_search
+{
+    "size": 0, 
+    "aggregations" : {
+        "find_laura" : {
+            "terms" : {
+                "field" : "friends",
+                "include": "laura"
+            }
+        }
+    }
+}
+
+Response: {
+    "took": 12,
+    "timed_out": false,
+    "_shards": {
+        "total": 3,
+        "successful": 3,
+        "failed": 0
+    },
+    "hits": {
+        "total": 12,
+        "max_score": 0,
+        "hits": []
+    },
+    "aggregations": {
+        "find_laura": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+                {
+                    "key": "laura",
+                    "doc_count": 8
+                }
+            ]
+        }
+    }
+}
